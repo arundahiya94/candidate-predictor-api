@@ -8,10 +8,15 @@ WORKDIR /app
 COPY . /app
 
 # Install the required dependencies
-RUN pip install -no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose the port on which the app will run
+# Expose port 8000 for the Flask app
 EXPOSE 8000
 
-# Run the flask app
-CMD ["python", "app/main.py"]
+# Set environment variables
+ENV FLASK_APP=app.main
+ENV FLASK_ENV=development
+ENV FLASK_RUN_PORT=8000
+
+# Command to run the Flask app
+CMD ["flask", "run", "--host=0.0.0.0"]
