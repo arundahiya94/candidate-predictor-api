@@ -26,7 +26,7 @@ A machine learning model that predicts candidate hirable status using logistic r
       "pull_request_count": 10,
       "issue_count": 5,
       "member_exp": 1
-  }
+  } ```
 5. docker stop candidate-predictor
 6. docker rm candidate-predictor
 
