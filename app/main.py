@@ -33,7 +33,9 @@ def predict_candidate():
     prediction = predict(features)
 
     response = data.copy()
-    response['prediction']
+    response['prediction'] = int(prediction)
 
-# if __name__ == "__main__":
-#     app.run()
+    return jsonify(response), 200
+
+if __name__ == "__main__":
+    app.run()
