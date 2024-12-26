@@ -1,7 +1,7 @@
 import pickle
 import numpy as np
+from flask import current_app
 
-MODEL_PATH = "model/logistic_model.pkl"
 
 def load_model(file_path):
     """Load the model from the Pickle file and use it for the prediction"""
@@ -12,7 +12,10 @@ def load_model(file_path):
     return model
 
 def predict(features):
-    model = load_model(MODEL_PATH)
+    """Predict the eligibility of the candidate"""
+
+    model = load_model(current_app.config['MODEL_PATH'])
     features_array = np.array[features]
     prediction = model.predict(features_array)[0]
+    
     return prediction

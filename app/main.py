@@ -1,12 +1,15 @@
 from flask import Flask, request, jsonify
 from app.model import predict
+import os
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 
-# @app.route("/", methods=['GET'])
-# def home():
-#     return "Hello this is the home method"
+load_dotenv()
 
+# Configure the app using environment variables
+app.config['MODEL_PATH'] = os.getenv('MODEL_PATH', 'model/logistic_model.pkl')
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'default-secret-key')
 
 @app.route("/predict", methods = ["POST"])
 def predict_candidate():
