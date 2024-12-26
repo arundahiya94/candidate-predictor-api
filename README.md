@@ -2,10 +2,22 @@
 A machine learning model that predicts candidate hirable status using logistic regression. This project exposes an API endpoint for real-time predictions and is deployed using Docker for scalable and easy deployment.
 
 ## Steps to download and run the docker image
-1. docker pull arundahiya94/candidate-predictor-api
-2. docker run -d -p 8000:8000 --name candidate-predictor arundahiya94/candidate-predictor-api
-3. URL : localhost:8000/predict
-4. Sample JSON File for post request
+1. Execute the following commands 
+```bash
+# Pull the Docker image
+docker pull arundahiya94/candidate-predictor-api
+
+# Run the Docker container
+docker run -d -p 8000:8000 --name candidate-predictor arundahiya94/candidate-predictor-api
+
+# To stop the Docker container
+docker stop candidate-predictor
+
+# To remove the Docker container
+docker rm candidate-predictor
+
+4. URL : localhost:8000/predict
+5. Sample JSON File for post request
 
 ```json
     {
@@ -28,8 +40,6 @@ A machine learning model that predicts candidate hirable status using logistic r
       "member_exp": 1
   }
 ```
-5. docker stop candidate-predictor
-6. docker rm candidate-predictor
 
 
 
