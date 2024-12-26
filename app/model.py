@@ -15,7 +15,7 @@ def predict(features):
     """Predict the eligibility of the candidate"""
 
     model = load_model(current_app.config['MODEL_PATH'])
-    features_array = np.array[features]
+    features_array = np.array(features).reshape(1, -1)
     prediction = model.predict(features_array)[0]
     
     return prediction

@@ -4,7 +4,11 @@ colorama
 Flask
 itsdangerous
 Jinja2
+joblib
 MarkupSafe
 numpy
 python-dotenv
+scikit-learn
+scipy
+threadpoolctl
 Werkzeug
