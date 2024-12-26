@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from app.model import predict
+from model import predict
 import os
 from dotenv import load_dotenv
 
@@ -39,6 +39,3 @@ def predict_candidate():
     response['prediction'] = int(prediction)
 
     return jsonify(response), 200
-
-if __name__ == "__main__":
-    app.run()
