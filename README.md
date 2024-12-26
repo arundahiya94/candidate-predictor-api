@@ -6,6 +6,7 @@ A machine learning model that predicts candidate hirable status using logistic r
 2. docker run -d -p 8000:8000 --name candidate-predictor arundahiya94/candidate-predictor-api
 3. URL : localhost:8000/predict
 4. Sample JSON File for post request
+'''json
   {
     "reputation": 100,
     "reached": 5,
