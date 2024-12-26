@@ -15,9 +15,10 @@ docker stop candidate-predictor
 
 # To remove the Docker container
 docker rm candidate-predictor
+```
 
-4. URL : localhost:8000/predict
-5. Sample JSON File for post request
+2. URL : localhost:8000/predict
+3. Sample JSON File for post request
 
 ```json
     {
